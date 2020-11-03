@@ -39,11 +39,10 @@ li a:hover{
   border: 1px solid black;
 }
 #carousel{
-	border: 3px solid red;
+	text-align: center;
 }
 #caro-img{
 	margin-left: right;
-	border: 1px solid blue;
 	width: 400px;
 	height: 600px;
 }
