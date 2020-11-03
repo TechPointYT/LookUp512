@@ -38,3 +38,12 @@ li a:hover{
 #contact td {
   border: 1px solid black;
 }
+#carousel{
+	border: 3px solid red;
+}
+#caro-img{
+	margin-left: right;
+	border: 1px solid blue;
+	width: 400px;
+	height: 600px;
+}
