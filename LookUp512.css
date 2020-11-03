@@ -28,3 +28,13 @@ li a:hover{
 	font-size: 24px;
 	text-align: center;
 }
+#contact {
+  margin-top: 30px;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  border: 1px solid black;
+}
+#contact td {
+  border: 1px solid black;
+}
