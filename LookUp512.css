@@ -46,3 +46,13 @@ li a:hover{
 	width: 400px;
 	height: 600px;
 }
+.events{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 50%;
+  border: 3px solid black;
+}
+#about {
+  text-align: center;
+}
