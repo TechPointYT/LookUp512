@@ -61,3 +61,7 @@ li a:hover{
   height: 500px;
   border: 3px solid black;
 }
+
+.eventHeader {
+  text-align: center;
+}
