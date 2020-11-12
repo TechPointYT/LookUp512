@@ -99,7 +99,8 @@ li a:hover{
 
 #loginContainer {
   border: 3px solid black;
-  margin: auto;
+  margin-left: 50%;
+  margin-right: 50%;
 }
 
 #login {
