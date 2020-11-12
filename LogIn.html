@@ -51,15 +51,18 @@
 	
 	</div>
 
-  	<div class="login">
-	    <label for="username"><b>Username</b></label>
-	    <input id="username" type="text" placeholder="Enter Username" name="username" required>
+  	<form id="login container" action="login.php" method="post">
 
-	    <label for="psw"><b>Password</b></label>
-	    <input id="password" type="password" placeholder="Enter Password" name="password" required>
+	  	<div id="login">
+	    		<label for="username"><b>Username</b></label>
+	    		<input type="text" placeholder="Enter Username" name="username">
 
-	    <button type="submit">Login</button>
-  	</div>
+	    		<label for="password"><b>Password</b></label>
+	    		<input type="password" placeholder="Enter Password" name="password">
+
+			<button type="submit">Login</button>
+	  	</div>
+	</form>
 
 	<footer id="signature">
 		<p>
