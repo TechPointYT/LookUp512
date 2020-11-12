@@ -14,19 +14,18 @@ function initMap() {
 		label: "UT",
 	});
 
-	const addresses = ["1234 S Lamar Blvd, Austin, TX 78704"];
-	for(var i = 0;i<addresses.length;i++){
-		geocoder.geocode({address: addresses[i]}, (results, status) => {
+	const addresses = ["1234 S Lamar Blvd, Austin, TX 78704","1421 South Congress Avenue, Austin, TX","2808 Guadalupe St, Austin, TX 78705"];
+	addresses.forEach(address => {
+		geocoder.geocode({address: address}, (results, status) => {
 			if (status === "OK") {
 				new google.maps.Marker({
 				  map: map,
 				  position: results[0].geometry.location,
-				  label: ""+i,
 				});
 			  } else {
 				alert("Geocode was not successful for the following reason: " + status);
 			  }
 		});
-	}
+	});
 }
 
