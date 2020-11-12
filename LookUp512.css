@@ -97,14 +97,6 @@ li a:hover{
   margin-bottom: 10px;
 }
 
-#loginContainer {
-  border: 3px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  width: 50%;
-}
-
 #login {
   margin: 10px;
   
