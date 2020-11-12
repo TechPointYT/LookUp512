@@ -1,3 +1,6 @@
+html, body {
+  height: 100%;
+}
 li{
 	display: inline;
 }
@@ -58,9 +61,29 @@ li a:hover{
   text-align: center;
 }
 #map{
-  width: 500px;
-  height: 500px;
+  width: 80%;
+  height: 65%;
+  margin: 10px auto 10px auto;
   border: 3px solid black;
+}
+#sectionList{
+  width: 80%;
+}
+#section{
+  width: 70%;
+  float: left;
+}
+#sectionInfoTitle{
+  font-weight: bold;
+}
+#sectionImage{
+  width: 30%;
+  height: 225px;
+  float: right;
+}
+#sectionName{
+  font-size: 24pt;
+  font-weight: bold;
 }
 
 .eventHeader {
