@@ -51,7 +51,7 @@
 	
 	</div>
 
-  	<form id="loginContainer" action="login.php" method="post">
+  	<form id="loginContainer" action="login.php" onsubmit="return validate()" method="post">
 
 	  	<table class="events">
 			<tr>
@@ -68,7 +68,7 @@
 				</td>
 			</tr>
 	  	</table>
-		<button type="submit">Login</button>
+		<button class="butts" type="submit">Login</button>
 	</form>
 
 	<footer id="signature">
