@@ -5,7 +5,7 @@ function DemoEvent(){
 			<h4 class="eventTitle">Event Name</h4>
 			<p class="eventDate">11/11/20</p>
 			<p class="eventDesc">Demo Event description</p>
-			<p ><a class="eventLink" href="#">Link</a></p>
+			<p ><a class="eventLink" href="event.html">Link</a></p>
 		</div>
 	`;
 }
