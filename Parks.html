@@ -8,7 +8,8 @@
 	<meta name="description" content="Events in Austin">
 	<meta name="author" content="Luis Piña, David Alvarez, Jack Thielman">
 	<link rel="stylesheet" type="text/css" href="LookUp512.css">
-	<script src=""> </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdGpLI3Pz1m-8XzcQ7Zx0aY6-6xq-1Xfw&callback=initMap&libraries=&v=weekly" defer> </script>
+	<script src="mapsParks.js"></script>
 </head>
 
 <body>
@@ -47,6 +48,110 @@
 				</table>
 			</div>
 		</ul>
+	</div>
+
+	<div id="map"></div>
+
+	<div id="sectionListContainer">
+		<table id="sectionList">
+			<tr>
+				<td>
+					<div>
+						<img id="sectionImage" src="images\eastwoods.jpg" alt="eastwoods">
+					</div>
+					<div id="sectionName" class="sectionText">
+						Eastwoods Park
+					</div>
+					<table id="section">
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Hours: </span> 5AM-10PM
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Address:</span> 3001 Harris Park Ave
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText"> 
+								<span id="sectionInfoTitle">Size:</span> 9 acres
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Amenities:</span> Tennis Courts, Picnic Tables, Playground, Short Walking Trails
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div>
+						<img id="sectionImage" src="images\pease.jpg" alt="pease">
+					</div>
+					<div id="sectionName" class="sectionText">
+						Pease Park
+					</div>
+					<table id="section">
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Hours: </span> 5AM-10PM
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Address:</span> 1100 Kingsbury St
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText"> 
+								<span id="sectionInfoTitle">Size:</span> 42 acres
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Amenities:</span> Trails, Volleyball Courts, Basketball Court, Playground
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div>
+						<img id="sectionImage" src="images\zilker.jpg" alt="zilker">
+					</div>
+					<div id="sectionName" class="sectionText">
+						Zilker Park
+					</div>
+					<table id="section">
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Hours: </span> 5AM-10PM
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Address:</span> 2207 Lou Neff Rd
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText"> 
+								<span id="sectionInfoTitle">Size:</span> 350 acres
+							</td>
+						</tr>
+						<tr>
+							<td id="sectionInfo" class="sectionText">
+								<span id="sectionInfoTitle">Amenities:</span> Picnic Sites, Disc Golf Course, Volleyball Courts, Austin Nature and Science Center,
+								Barton Springs Pool, McBeth Recreation Center, Zilker Botanical Gardens, Zilker Hillside Theatre 
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
 	</div>
 
 	<footer id="signature">

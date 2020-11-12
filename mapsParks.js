@@ -14,19 +14,17 @@ function initMap() {
 		label: "UT",
 	});
 
-	const addresses = ["1234 S Lamar Blvd, Austin, TX 78704","1421 South Congress Avenue, Austin, TX","2808 Guadalupe St, Austin, TX 78705"];
+	const addresses = ["3001 Harris Park Ave, Austin, TX 78705","1100 Kingsbury St, Austin, TX 78703","2207 Lou Neff Rd, Austin, TX 78746"];
 	addresses.forEach(address => {
 		geocoder.geocode({address: address}, (results, status) => {
-			if(status === "OK") {
+			if (status === "OK") {
 				new google.maps.Marker({
 					map: map,
 					position: results[0].geometry.location,
 				});
-			}
-			else{
+			} else {
 				alert("Geocode was not successful for the following reason: " + status);
 			}
 		});
 	});
 }
-
