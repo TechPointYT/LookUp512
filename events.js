@@ -1,3 +1,18 @@
+
+
+var events = []
+function retrieveInfo(){
+$.ajax({
+    type: 'POST',
+    url: 'myFile.php',
+    success: function(result) {
+        events = JSON.parse(result);
+    }
+});
+
+}
+
+
 function DemoEvent(){
 	return `
 

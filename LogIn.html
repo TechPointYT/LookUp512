@@ -8,7 +8,8 @@
 	<meta name="description" content="Events in Austin">
 	<meta name="author" content="Luis Piña, David Alvarez, Jack Thielman">
 	<link rel="stylesheet" type="text/css" href="LookUp512.css">
-	<script src="validate.js"> </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="login.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
 	<div id="navBar">
 		<ul>
 			<div id="logoContainer" class="container">
-				<a href="LookUp512.html"> <img id="logo" width="30" height="30" src="images\logos\logo.png" alt="Logo"> </a>
+				<a href="index.html"> <img id="logo" width="30" height="30" src="images\logos\logo.png" alt="Logo"> </a>
 			</div>
 
 			<li>
@@ -51,20 +52,20 @@
 	
 	</div>
 
-  	<form id="loginContainer" onsubmit="return validate()" method="post">
+  	<form id="loginForm" method="post">
 
 	  	<table class="events">
 			<tr>
 				<td>
 				<label for="username"><b>Username</b></label>
-				<input id="username" type="text" placeholder="Enter Username" name="username" minlength="5" maxlength="10">
+				<input id="username" type="text" placeholder="Enter Username" name="username" minlength="5" maxlength="10" required>
 				</td>
 			</tr>
 			
 			<tr>
 				<td>
 				<label for="password"><b>Password</b></label>
-				<input id="password" type="password" placeholder="Enter Password" name="password" minlength="6" maxlength="16">
+				<input id="password" type="password" placeholder="Enter Password" name="password" minlength="6" maxlength="16" required>
 				</td>
 			</tr>
 			
