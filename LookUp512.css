@@ -84,22 +84,18 @@ li a:hover{
   font-size: 24pt;
   font-weight: bold;
 }
-
 .eventHeader {
   text-align: center;
 }
-
 .eventImg {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
 }
-
 #login {
   margin: 10px;
 }
-
 .butts {
  
 }

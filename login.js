@@ -3,7 +3,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$.ajax({
 			type: "POST",
-			url: "login.php",
+			url: "loginBackend.php",
 			data: $(this).serialize(),
 			success: function(response){
 				var responseData = JSON.parse(response);
