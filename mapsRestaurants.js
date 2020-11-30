@@ -1,31 +1,25 @@
 var restaurants = [];
 var addresses = []
-function retrieveInfo(){
 $.ajax({
     type: 'POST',
-    url: 'myFile.php',
+    url: 'restaurantsBackend.php',
     success: function(result) {
-        restaurants = JSON.parse(result);
-        // do something with the jsonData
-        for (var i = 0; i < restaurants.length; i++) {
+		var restaurantsArray = result.split("}");
+		restaurantsArray = restaurantsArray.slice(0,restaurantsArray.length-1);
+		restaurantsArray.forEach(item => {
+			restaurants.push(JSON.parse(item+"}"));
+		});
+		for (var i = 0; i < restaurants.length; i++) {
         	addresses.push(restaurants[i].address);
-        }
-
+		}
+		populateInfo();
     }
 });
-
-}
 
 function formatInfo(restaurant){
 	return ` 
 		<tr>
 				<td>
-					<div>
-						<img id='sectionImage' src='images\\eastwoods.jpg' alt='eastwoods'>
-					</div>
-					<div id="sectionName" class="sectionText">
-						
-					</div>
 					<table id="section">
 						<tbody>
 						<th colspan="1"><h1 class="parkName">${restaurant.name}</h1></th>
@@ -63,7 +57,10 @@ function formatInfo(restaurant){
 }
 
 function populateInfo(){
-	for (var i = 0; i < parks.length; i++) {
+	for (var i = 0; i < restaurants.length; i++) {
+		if(!restaurants[i].link.match("http.+")){
+			restaurants[i].link = "https://"+restaurants[i].link;
+		}
 		$("#sectionList").append(formatInfo(restaurants[i]));	
 	}
 }
@@ -84,7 +81,6 @@ function initMap() {
 		label: "UT",
 	});
 
-	const addresses = ["1234 S Lamar Blvd, Austin, TX 78704","1421 South Congress Avenue, Austin, TX","2808 Guadalupe St, Austin, TX 78705"];
 	addresses.forEach(address => {
 		geocoder.geocode({address: address}, (results, status) => {
 			if(status === "OK") {
