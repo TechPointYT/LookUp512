@@ -13,6 +13,7 @@ $.ajax({
         	addresses.push(parks[i].address);
 		}
 		populateInfo();
+		initMap();
     }
 });
 

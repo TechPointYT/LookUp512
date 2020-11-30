@@ -13,6 +13,7 @@ $.ajax({
         	addresses.push(restaurants[i].address);
 		}
 		populateInfo();
+		initMap();
     }
 });
 
