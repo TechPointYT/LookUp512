@@ -100,7 +100,7 @@ li a:hover{
  
 }
 
-#eventForm{
+#eventForm {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
@@ -108,4 +108,8 @@ li a:hover{
   text-align: center;
   width: 50%;
   border: 3px solid black;
+}
+
+#eventForm table {
+  margin: auto;
 }
