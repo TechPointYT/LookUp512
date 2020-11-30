@@ -39,12 +39,6 @@ if(!isset($_SESSION)){
 			<div id="loginSearch">
 				<table>
 					<tr>
-						<td id="searchFieldContainer" class="container">
-							<input type="textarea">
-						</td>
-						<td id="searchContainer" class="container">
-							<input type="button" value="Search">
-						</td>
 						<td id="loginContainer" class="container">
 							<input type="button" value="Log In">
 						</td>
