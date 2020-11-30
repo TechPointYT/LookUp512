@@ -113,3 +113,18 @@ li a:hover{
 #eventForm table {
   margin: auto;
 }
+
+#eventForm table tr td input {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#eventForm table tr td h2 {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+#eventForm table tr td h3 {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
