@@ -12,6 +12,11 @@ $.ajax({
 
 }
 
+function pickfeaturedEvent(){
+	var pickedEvent = Math.floor(Math.random()*events.length);
+
+}
+
 
 function eventTemplate(event){
 	return `
