@@ -1,26 +1,12 @@
-
-
 var events = []
-function retrieveInfo(){
-$.ajax({
-    type: 'POST',
-    url: 'myFile.php',
-    success: function(result) {
-        events = JSON.parse(result);
-    }
-});
-
-}
 
 function pickfeaturedEvent(){
 	var pickedEvent = Math.floor(Math.random()*events.length);
-
 }
 
 
 function eventTemplate(event){
 	return `
-
 		<div class="item">
 			<h4 class="eventTitle">${event.name}</h4>
 			<p class="eventDate">${event.date}</p>
@@ -33,12 +19,25 @@ function eventTemplate(event){
 
 
 $(document).ready(function(){
-	addEvents();
+	$.ajax({
+		type: 'POST',
+		url: 'eventBackend.php',
+		success: function(result) {
+			var eventArray = result.split("}");
+			eventArray = eventArray.slice(0,eventArray.length-1);
+			eventArray.forEach(item => {
+				events.push(JSON.parse(item+"}"));
+			});
+			addEvents();
+		}
+	});
 });
 
 function addEvents(){
 	for (var i = 0; i < events.length; i++) {
+		if(!events[i].link.match("http.+")){
+			events[i].link = "https://"+events[i].link;
+		}
 		$(".columns").append(eventTemplate(events[i]));
 	}
-	
 }

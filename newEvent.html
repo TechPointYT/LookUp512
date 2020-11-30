@@ -9,7 +9,7 @@
 	<meta name="author" content="Luis Piña, David Alvarez, Jack Thielman">
 	<link rel="stylesheet" type="text/css" href="LookUp512.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="register.js"></script>
+	<script src="newEvent.js"></script>
 </head>
 
 <body>
@@ -47,10 +47,9 @@
 	</div>
 
   	<form id="eventForm" method="post">
-
-	  	<table>
+	  	<table class="events">
 			<tr><td><h2>Name of event</h2></td></tr>
-			<tr><td><input type="text" name="nameEvent"></td></tr>
+			<tr><td><input type="text" name="nameEvent" required></td></tr>
 			<tr><td><h3>Date</h3></td></tr>
 			<tr><td><input type="date" name="dateEvent"></td></tr>
 			<tr><td><h3>Description</h3></td></tr>
@@ -61,9 +60,8 @@
 			<tr><td><h3>Link to official event page</h3></td></tr>
 			<tr><td><input type="text" name="linkEvent"></td></tr>
 			<tr><td><button id="submit" name="submit" >Submit</button></td></tr>
-			<tr><td><button id="cancel" name="cancel" >cancel</button></td></tr>
+			<tr><td><button id="cancel" name="cancel" >Cancel</button></td></tr>
 	  	</table>
-		
 	</form>
 
 	<footer id="signature">
