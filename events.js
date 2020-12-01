@@ -2,6 +2,7 @@ var events = []
 
 function pickfeaturedEvent(){
 	var pickedEvent = Math.floor(Math.random()*events.length);
+	$("#highlight").append(eventTemplate(events[pickedEvent]));
 }
 
 
@@ -29,6 +30,7 @@ $(document).ready(function(){
 				events.push(JSON.parse(item+"}"));
 			});
 			addEvents();
+			pickfeaturedEvent();
 		}
 	});
 });
