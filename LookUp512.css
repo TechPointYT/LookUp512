@@ -1,3 +1,16 @@
+body{
+  background-color: black;
+}
+#title{
+  background-color: white;
+}
+.content{
+  background-color: rgba(94, 70, 59, 1);
+  width:50%;
+  margin: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
 html, body {
   height: 100%;
 }
@@ -54,7 +67,7 @@ li a:hover{
   margin-right: auto;
   margin-top: 10px;
   padding: 5px;
-  width: 50%;
+  width: 80%;
   border: 3px solid black;
 }
 #about {
