@@ -12,6 +12,7 @@ if(!isset($_SESSION)){
 	<meta name="description" content="Events in Austin">
 	<meta name="author" content="Luis Piña, David Alvarez, Jack Thielman">
 	<link rel="stylesheet" type="text/css" href="LookUp512.css">
+	<link rel="stylesheet" type="text/css" href="phpPagesCSS.php">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="login.js"></script>
 </head>

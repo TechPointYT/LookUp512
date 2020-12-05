@@ -7,12 +7,12 @@
 			die('Connect Error: '.$mysqli->connect_errno.": ".$mysqli->connect_error);
 		}
 
-		$name = $_POST['nameEvent'];
-		$date = $_POST['dateEvent'];
-		$desc = $_POST['descEvent'];
-		$img1 = $_POST['imgLink1Event'];
-		$img2 = $_POST['imgLink2Event'];
-		$link = $_POST['linkEvent'];
+		$name = mysqli_real_escape_string($mysqli,$_POST['nameEvent']);
+		$date = mysqli_real_escape_string($mysqli,$_POST['dateEvent']);
+		$desc = mysqli_real_escape_string($mysqli,$_POST['descEvent']);
+		$img1 = mysqli_real_escape_string($mysqli,$_POST['imgLink1Event']);
+		$img2 = mysqli_real_escape_string($mysqli,$_POST['imgLink2Event']);
+		$link = mysqli_real_escape_string($mysqli,$_POST['linkEvent']);
 
 		$message = "Error";
 		$query = "INSERT INTO lu512Events(name, eventDate, dsc, img1, img2, link)

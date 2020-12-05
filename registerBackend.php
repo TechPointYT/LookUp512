@@ -6,8 +6,8 @@
 		if($mysqli->connect_errno){
 			die('Connect Error: '.$mysqli->connect_errno.": ".$mysqli->connect_error);
 		}
-		$u = $_POST['username'];
-		$p = $_POST['password'];
+		$u = mysqli_real_escape_string($mysqli,$_POST['username']);
+		$p = mysqli_real_escape_string($mysqli,$_POST['password']);
 		$message = "Error";
 		$query = "SELECT * from lu512Login WHERE username = '$u';";
 		$result = $mysqli->query($query);

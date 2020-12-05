@@ -1,20 +1,22 @@
 var parks = [];
 var addresses = []
-$.ajax({
-    type: 'POST',
-    url: 'parksBackend.php',
-    success: function(result) {
-		var parksArray = result.split("}");
-		parksArray = parksArray.slice(0,parksArray.length-1);
-		parksArray.forEach(item => {
-			parks.push(JSON.parse(item+"}"));
-		});
-		for (var i = 0; i < parks.length; i++) {
-        	addresses.push(parks[i].address);
+$(document).ready(function(){
+	$.ajax({
+		type: 'POST',
+		url: 'parksBackend.php',
+		success: function(result) {
+			var parksArray = result.split("}");
+			parksArray = parksArray.slice(0,parksArray.length-1);
+			parksArray.forEach(item => {
+				parks.push(JSON.parse(item+"}"));
+			});
+			for (var i = 0; i < parks.length; i++) {
+				addresses.push(parks[i].address);
+			}
+			//populateInfo();
+			initMap();
 		}
-		populateInfo();
-		initMap();
-    }
+	});
 });
 
 function formatInfo(park){
@@ -57,8 +59,6 @@ function populateInfo(){
 	}
 }
 
-
-
 function initMap() {
 	const austin = {lat: 30.2672, lng: -97.7431};
 
@@ -75,12 +75,19 @@ function initMap() {
 		label: "UT",
 	});
 
-	addresses.forEach(address => {
-		geocoder.geocode({address: address}, (results, status) => {
+	parks.forEach(park => {
+		geocoder.geocode({address: park.address}, (results, status) => {
 			if (status === "OK") {
-				new google.maps.Marker({
+				const infoWindow = new google.maps.InfoWindow({
+					content: formatInfo(park),
+				});
+				const marker = new google.maps.Marker({
 					map: map,
 					position: results[0].geometry.location,
+					label: ""+(parks.indexOf(park)+1),
+				});
+				marker.addListener("click", () => {
+					infoWindow.open(map, marker);
 				});
 			} else {
 				alert("Geocode was not successful for the following reason: " + status);

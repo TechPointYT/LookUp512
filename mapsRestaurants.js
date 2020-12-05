@@ -10,9 +10,12 @@ $.ajax({
 			restaurants.push(JSON.parse(item+"}"));
 		});
 		for (var i = 0; i < restaurants.length; i++) {
+			if(!restaurants[i].link.match("http.+")){
+				restaurants[i].link = "https://"+restaurants[i].link;
+			}
         	addresses.push(restaurants[i].address);
 		}
-		populateInfo();
+		//populateInfo();
 		initMap();
     }
 });
@@ -59,9 +62,6 @@ function formatInfo(restaurant){
 
 function populateInfo(){
 	for (var i = 0; i < restaurants.length; i++) {
-		if(!restaurants[i].link.match("http.+")){
-			restaurants[i].link = "https://"+restaurants[i].link;
-		}
 		$("#sectionList").append(formatInfo(restaurants[i]));	
 	}
 }
@@ -82,12 +82,19 @@ function initMap() {
 		label: "UT",
 	});
 
-	addresses.forEach(address => {
-		geocoder.geocode({address: address}, (results, status) => {
+	restaurants.forEach(restaurant => {
+		geocoder.geocode({address: restaurant.address}, (results, status) => {
 			if(status === "OK") {
-				new google.maps.Marker({
+				const infoWindow = new google.maps.InfoWindow({
+					content: formatInfo(restaurant),
+				});
+				const marker = new google.maps.Marker({
 					map: map,
 					position: results[0].geometry.location,
+					label: ""+(restaurants.indexOf(restaurant)+1),
+				});
+				marker.addListener("click", () => {
+					infoWindow.open(map, marker);
 				});
 			}
 			else{
