@@ -13,7 +13,6 @@ $(document).ready(function(){
 			for (var i = 0; i < parks.length; i++) {
 				addresses.push(parks[i].address);
 			}
-			//populateInfo();
 			initMap();
 		}
 	});
@@ -51,12 +50,6 @@ function formatInfo(park){
 			</tr>
 	`;
 
-}
-
-function populateInfo(){
-	for (var i = 0; i < parks.length; i++) {
-		$("#sectionList").append(formatInfo(parks[i]));	
-	}
 }
 
 function initMap() {

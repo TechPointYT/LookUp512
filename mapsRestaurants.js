@@ -15,7 +15,6 @@ $.ajax({
 			}
         	addresses.push(restaurants[i].address);
 		}
-		//populateInfo();
 		initMap();
     }
 });
@@ -58,12 +57,6 @@ function formatInfo(restaurant){
 
 	`;
 
-}
-
-function populateInfo(){
-	for (var i = 0; i < restaurants.length; i++) {
-		$("#sectionList").append(formatInfo(restaurants[i]));	
-	}
 }
 
 function initMap() {

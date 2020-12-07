@@ -16,7 +16,7 @@ $(document).ready(function(){
 						window.alert(responseData.displayMessage);
 					}
 					else{
-						window.alert("Error: AJAX Response from PHP");
+						window.alert("Error: Something went wrong. Make sure you are logged in.");
 					}
 				}
 			}

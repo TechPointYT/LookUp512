@@ -22,7 +22,7 @@
 					if(!isset($_SESSION)){
 						session_start();
 					}
-					setcookie("username",$u, time()+3600);
+					setcookie("username",$u, time()+86400);
 					echo json_encode(array("success" => 1, "displayMessage" => $message));
 				}
 			}

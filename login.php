@@ -1,7 +1,7 @@
 <?php
-if(!isset($_SESSION)){
-	session_start();
-}
+	if(!isset($_SESSION)){
+		session_start();
+	}
 ?>
 
 <html lang ="en">
@@ -30,25 +30,23 @@ if(!isset($_SESSION)){
 			</div>
 
 			<li>
-				<a href="Events.html">Events</a>
+				<a href="Events.php">Events</a>
 				<a href="Parks.html">Parks</a>
 				<a href="Restaurants.html">Restaurants</a>
 				<a href="History.html">History</a>
-				<a href="index.html">Contact Us</a>
+				<a href="ContactUs.html">Contact Us</a>
 			</li>
 
 			<div id="loginSearch">
 				<table>
 					<tr>
 						<td id="loginContainer" class="container">
-							<input type="button" value="Log In">
+							<a href="login.php"> <input type="button" value="Log In"> </a>
 						</td>
 					</tr>
 				</table>
 			</div>
 		</ul>
-	</div>
-	
 	</div>
 
   	<form id="loginForm" method="post">

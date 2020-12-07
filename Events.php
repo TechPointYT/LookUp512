@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+	if(!isset($_SESSION)){
+		session_start();
+		$_SESSION['editMode'] = FALSE;
+	}
+?>
 
 <html lang ="en">
 
@@ -16,8 +21,8 @@
 <body>
 	
 
-	<div id="title">
-		<img src="images/logos/Events.png" alt="logo" width="450" height="200">
+	<div id="logoContainer" class="container">
+		<a href="index.html"> <img id="logo" width="30" height="30" src="images\logos\logo.png" alt="Logo"> </a>
 	</div>
 
 	<div id="navBar">
@@ -27,7 +32,7 @@
 			</div>
 
 			<li>
-				<a href="Events.html">Events</a>
+				<a href="Events.php">Events</a>
 				<a href="Parks.html">Parks</a>
 				<a href="Restaurants.html">Restaurants</a>
 				<a href="History.html">History</a>
@@ -48,18 +53,19 @@
 	
 	<div class="content">
 		<div class="container2">
-			<div class="highlight" id="higlight">
+			<div class="highlight" id="highlight">
 				<h2>Highlighted Event</h2>
 
-			<div>
 				<center>
-				<a href="newEvent.html">	
-					<button id="newEvent" name="newEvent">Add New Event</button>
-				</a>
-
+					<?php
+						if(isset($_COOKIE['username'])){
+							echo "<a href=\"newEvent.html\">";
+							echo "<button id=\"newEvent\" name=\"newEvent\">Add New Event</button>";
+							echo "</a>";
+						}
+					?>
 				</center>
 
-		</div>
 			</div>
 			<h2>Events</h2>
 			<div class="container3">
