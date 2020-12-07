@@ -2,7 +2,10 @@ body{
   background-color: black;
 }
 #title{
-  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 .content{
   background-color: rgba(94, 70, 59, 1);
