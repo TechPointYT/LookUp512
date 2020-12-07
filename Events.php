@@ -21,8 +21,8 @@
 <body>
 	
 
-	<div id="logoContainer" class="container">
-		<a href="index.html"> <img id="logo" width="30" height="30" src="images\logos\logo.png" alt="Logo"> </a>
+	<div id="title">
+		<img src="images/logos/logo2.png" alt="logo" width="450" height="200">
 	</div>
 
 	<div id="navBar">
