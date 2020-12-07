@@ -6,7 +6,7 @@
 		die('Connect Error: '.$mysqli->connect_errno.": ".$mysqli->connect_error);
 	}
 
-	$id = $_POST['id'];
+	$id =  mysqli_real_escape_string($mysqli,$_POST['id']);
 
 	$query = "DELETE FROM lu512Events WHERE id=$id;";
 	$result = $mysqli->query($query);

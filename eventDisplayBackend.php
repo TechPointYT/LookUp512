@@ -11,16 +11,16 @@
 		die('Connect Error: '.$mysqli->connect_errno.": ".$mysqli->connect_error);
 	}
 
-	$id = $_POST['idEvent'];
-	$name = $_POST['nameEvent'];
-	$date = $_POST['dateEvent'];
-	$desc = $_POST['descEvent'];
-	$longDesc = $_POST['longDescEvent'];
-	$img1 = $_POST['imgLink1'];
-	$img2 = $_POST['imgLink2'];
-	$link = $_POST['linkEvent'];
-	$creator = $_POST['eventCreator'];
-	$email = $_POST['creatorEmail'];
+	$id =  mysqli_real_escape_string($mysqli,$_POST['idEvent']);
+	$name =  mysqli_real_escape_string($mysqli,$_POST['nameEvent']);
+	$date =  mysqli_real_escape_string($mysqli,$_POST['dateEvent']);
+	$desc =  mysqli_real_escape_string($mysqli,$_POST['descEvent']);
+	$longDesc =  mysqli_real_escape_string($mysqli,$_POST['longDescEvent']);
+	$img1 =  mysqli_real_escape_string($mysqli,$_POST['imgLink1']);
+	$img2 =  mysqli_real_escape_string($mysqli,$_POST['imgLink2']);
+	$link =  mysqli_real_escape_string($mysqli,$_POST['linkEvent']);
+	$creator =  mysqli_real_escape_string($mysqli,$_POST['eventCreator']);
+	$email =  mysqli_real_escape_string($mysqli,$_POST['creatorEmail']);
 
 	$query = "UPDATE lu512Events 
 				SET name='$name', eventDate='$date', dsc='$desc', 
