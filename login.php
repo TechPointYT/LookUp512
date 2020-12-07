@@ -19,9 +19,9 @@
 
 <body>
 
-	<h1 id="title">
-		LookUp512
-	</h1>
+	<div id="title">
+		<img src="images/logos/logo2.png" alt="logo" width="450" height="200">
+	</div>
 
 	<div id="navBar">
 		<ul>
