@@ -19,7 +19,7 @@
 <body>
 
 	<div id="title">
-		<img src="images/logos/logo2.png" alt="logo" width="450" height="200">
+		<img src="images/logos/Events.png" alt="logo" width="450" height="200">
 	</div>
 
 	<div id="navBar">
