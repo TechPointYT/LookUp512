@@ -6,7 +6,11 @@ body{
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  background-color:rgba(94, 70, 59, 1);
+  background-color:white;
+  height: 125px;
+}
+#title img{
+  height: 150px;
 }
 .content{
   background-color: rgba(94, 70, 59, 1);
