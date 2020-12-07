@@ -34,7 +34,7 @@
 				<a href="Restaurants.html">Restaurants</a>
 				<a href="History.html">History</a>
 				<a href="ContactUs.html">Contact Us</a>
-			</li>i>
+			</li>
 
 			<div id="loginSearch">
 				<table>
